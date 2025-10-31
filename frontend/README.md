@@ -13,10 +13,11 @@ Wars character profiles served by a **FastAPI** backend.
 > - Node **18+** and **pnpm** installed (`npm i -g pnpm`).
 
 
-bash
+```bash
 cd frontend
 pnpm i
 pnpm dev
+```
 
 ---
 
