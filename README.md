@@ -41,7 +41,6 @@ FAN-SITE-VLEX/
 │  ├─ package.json
 │  ├─ README.md                 # Frontend docs
 │  └─ styles.css
-└─ fe-backup/                   # (optional backup folder)
 ```
 
 - Backend README: **[`backend/README.md`](./backend/README.md)**
