@@ -1,58 +1,21 @@
-# Star Wars Fan Site — Frontend (Lit + Vanilla JS)
+# Star Wars Fan Site — Frontend (Lit + Vite)
 
-A lightweight frontend built with **Lit** web components to search and view Star
-Wars character profiles served by the FastAPI backend.
+Lightweight frontend built with **Lit** web components to search and view Star
+Wars character profiles served by a **FastAPI** backend.
 
 ---
 
-## Quick Start
+## 🚀 Quick Start
 
-> Prereqs:
+> **Prerequisites**
 >
 > - Backend running at **http://localhost:8000** (see backend README).
-> - Any static server **with SPA fallback** (History API).  
->   Deep-links like `/character/1` must return `index.html`.
-
-### Option A — Node “serve” (recommended)
+> - Node **18+** and **pnpm** installed (`npm i -g pnpm`).
 
 ```bash
 cd frontend
-# one-time
-npm i -g serve
-# start with SPA fallback on http://localhost:5173
-serve -l 5173 -s .
-```
-
-### Option B — http-server (Node)
-
-```bash
-cd frontend
-npm i -g http-server
-# --spa ensures any path serves index.html
-http-server -p 5173 --spa
-```
-
-### Option C — tiny Express server (copy/paste)
-
-```bash
-# server.mjs
-import express from 'express';
-import path from 'path';
-import { fileURLToPath } from 'url';
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const app = express();
-const root = path.join(__dirname, '.');
-app.use(express.static(root));
-app.get('*', (_, res) => res.sendFile(path.join(root, 'index.html')));
-app.listen(5173, () => console.log('http://localhost:5173'));
-```
-
-```bash
-node server.mjs
-```
-
-> Python’s `http.server` **does not** handle SPA fallback; refreshing on
-> `/character/1` will 404. Prefer one of the options above.
+pnpm i
+pnpm dev
 
 ---
 
