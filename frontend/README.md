@@ -12,6 +12,8 @@ Wars character profiles served by a **FastAPI** backend.
 > - Backend running at **http://localhost:8000** (see backend README).
 > - Node **18+** and **pnpm** installed (`npm i -g pnpm`).
 
+
+```md
 ```bash
 cd frontend
 pnpm i
