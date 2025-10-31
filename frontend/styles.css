@@ -1,0 +1,93 @@
+/* Normalize + Reset (mobile-first, a11y) */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f7f6f4;
+  color: #222;
+  font-size: 16px;
+}
+body {
+  min-height: 100vh;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  margin: 0 auto;
+}
+
+main#app-root {
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100vh;
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid #eb7f39;
+  outline-offset: 2px;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Headings consistent spacing */
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  margin: 0.5em 0 0.25em;
+  letter-spacing: -0.01em;
+}
+h1 {
+  font-size: 1.7rem;
+}
+h2 {
+  font-size: 1.2rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  margin-bottom: 0.5em;
+}
+
+a {
+  color: #eb7f39;
+  text-decoration: underline;
+}
+a:focus,
+a:active {
+  color: #ba661e;
+}
+
+/* Layout for main sections */
+@media (min-width: 700px) {
+  main#app-root {
+    max-width: 1200px;
+    padding: 24px 24px 0 24px;
+  }
+}
+
+/* Visually hidden (for a11y-only messages) */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
