@@ -57,7 +57,8 @@ export class CharacterProfile extends LitElement {
       );
       if (myKey === this._reqKey) this.profile = data;
     } catch (err) {
-      if (err.name !== 'AbortError') this.error = 'Could not load character.';
+      if (!(err?.name !== 'AbortError' || err?.code === 20))
+        this.error = 'Could not load character.';
     } finally {
       this.loading = false;
     }

@@ -64,7 +64,7 @@ export class FeatureSidebar extends LitElement {
 
       const byName = FEATURED_NAMES.map((n) =>
         all.find((c) => c?.name === n)
-      ).filter(Boolean);
+      ).filter((x) => Boolean(x));
       const basePick =
         byName.length === FEATURED_NAMES.length ? byName : all.slice(0, 3);
 

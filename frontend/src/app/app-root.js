@@ -51,7 +51,6 @@ export class AppRoot extends LitElement {
   }
 
   _handleRoute(path) {
-    // console.log('path', path)
     if (path === '/' || path === '') {
       this.route = 'list';
       this.selectedId = null;

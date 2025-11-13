@@ -6,8 +6,8 @@ export async function fetchJSON(path, opts = {}) {
   const timer = setTimeout(() => ctrl.abort(), opts.timeoutMs ?? 10000);
   try {
     const res = await fetch(`${API_BASE}${path}`, {
-      ...opts,
-      signal: ctrl.signal
+      ...opts
+      // signal: ctrl.signal did some bug with aborting results
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     return await res.json();
